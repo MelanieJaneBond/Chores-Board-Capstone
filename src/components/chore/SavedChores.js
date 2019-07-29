@@ -7,11 +7,6 @@ export default class SavedChores extends Component {
         chores: []
     }
 
-    // componentDidMount() {
-    // APImanager.all(chores).then(choresData => {this.setState({ choresData })
-    // })
-    // }
-
 render() {
 return (
 <React.Fragment>
@@ -22,7 +17,7 @@ return (
                 <div className="chore-card-title">
                     <h5>{each.activity}</h5>
                     <h6>{each.materials}</h6>
-                    <p>{each.date}</p>
+                    <h6>{each.date}</h6>
                 </div>
             </div>
         </div>

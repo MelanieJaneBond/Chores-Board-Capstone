@@ -16,6 +16,15 @@ getChores = (chores) => {
     .then(choresData => this.setState({chores: choresData}))
   }
 
+  addChore = (choreObj) => {
+    return EventManager.post("chores", choreObj)
+        .then(() => EventManager.getAll("chores"))
+        .then(choreData =>
+            this.setState({
+              events: choreData 
+        })
+    );
+  }
 componentDidMount() {
     const newState = {}
     fetch("http://localhost:5002/chores")
@@ -28,7 +37,8 @@ render() {
     return (
       <React.Fragment>
         <Route exact path="/home" render={props => {
-            return ( <SavedChores {...props} chores={this.state.chores} />)    
+            return ( <SavedChores {...props} chores={this.state.chores} />
+                     <CreateChoreForm {...props} addChore={this.addChore})    
         }} />
         </React.Fragment>
         )
