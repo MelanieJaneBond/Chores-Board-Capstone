@@ -17,7 +17,7 @@ return (
 <React.Fragment>
     <section className="chore">
         {this.props.chores.map(each =>
-        <div key={each.id} className="chore-card" style="width 18rem">
+        <div key={each.id} className="chore-card">
             <div className="chore-card-body">
                 <div className="chore-card-title">
                     <h5>{each.activity}</h5>

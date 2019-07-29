@@ -18,7 +18,8 @@ getChores = (chores) => {
 
 componentDidMount() {
     const newState = {}
-    .then(() => APImanager.all("chores") )
+    fetch("http://localhost:5002/chores")
+    .then(r => r.json())
     .then(chores => (newState.chores = chores))
     .then(() => this.setState(newState))
 }
