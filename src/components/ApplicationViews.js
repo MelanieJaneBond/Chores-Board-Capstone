@@ -17,8 +17,8 @@ getChores = (chores) => {
   }
 
   addChore = (choreObj) => {
-    return EventManager.post("chores", choreObj)
-        .then(() => EventManager.getAll("chores"))
+    return APImanager.post("chores", choreObj)
+        .then(() => APImanager.all("chores"))
         .then(choreData =>
             this.setState({
               events: choreData 
@@ -36,9 +36,11 @@ componentDidMount() {
 render() {
     return (
       <React.Fragment>
-        <Route exact path="/home" render={props => {
-            return ( <SavedChores {...props} chores={this.state.chores} />
-                     <CreateChoreForm {...props} addChore={this.addChore})    
+        <Route path="/home" render={props => {
+            return <CreateChoreForm {...props} addChore={this.addChore} />      
+        }} />
+        <Route path="/home" render={props => {
+            return <SavedChores {...props} chores={this.state.chores} />
         }} />
         </React.Fragment>
         )
