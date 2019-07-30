@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import "./Chore.css"
-import APImanager from '../modules/APImanager';
 
 export default class CreateChoreForm extends Component {
     state = {

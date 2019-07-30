@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import "./Chore.css"
-import APImanager from "../modules/APImanager";
 
 export default class SavedChores extends Component {
     state = {
@@ -19,6 +18,7 @@ return (
                     <h6>{each.materials}</h6>
                     <h6>{each.date}</h6>
                 </div>
+                <button onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
             </div>
         </div>
         )}

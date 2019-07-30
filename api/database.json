@@ -1,25 +1,32 @@
 {
   "chores": [
     {
-      "activity": "mop",
-      "userId": 1,
-      "date": "July 29, 2019",
+      "id": 1,
+      "activity": "Mop the Kitchen",
       "materials": "rags, murphy's oil soap, bowl",
-      "id": 1
+      "date": "2019-08-04",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "activity": "Wipe off Countertops",
+      "materials": "paper towels",
+      "date": "1990-12-15",
+      "userId": ""
+    },
+    {
+      "id": 3,
+      "activity": "Load the Dishwasher",
+      "materials": "Dish Soap",
+      "date": "2019-07-30",
+      "userId": ""
     },
     {
       "activity": "Let the Dog Out",
       "materials": "Stay in view of dog while she is outside",
-      "date": "1990-10-15",
+      "date": "2020-06-24",
       "userId": "",
-      "id": 2
-    },
-    {
-      "activity": "Let the Dog Out",
-      "materials": "Stay in view of dog while she is outside",
-      "date": "1990-10-15",
-      "userId": "",
-      "id": 3
+      "id": 4
     }
   ]
 }
