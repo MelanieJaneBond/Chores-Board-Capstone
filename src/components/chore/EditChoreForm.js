@@ -37,7 +37,7 @@ export default class EditChoreForm extends Component {
 
     deleteChore = evt => {
         evt.preventDefault()
-        this.props.deleteChore(this.props.match.params.choresId)
+        this.props.deleteChore(parseInt(this.props.match.params.choresId))
         .then(() => this.props.history.push("/home"))
     }
 
@@ -54,7 +54,6 @@ componentDidMount() {
 //you're telling javascript to match the parameter in the URL and call it "choresId"
 
 render() {
-    console.log(this.props.match.params.choreId)
     return (
         <React.Fragment>
             <form>
@@ -71,7 +70,7 @@ render() {
                     <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.editForm}>Save</button>
-                <button onClick={this.props.deleteChore}>Delete</button>
+                <button onClick={this.deleteChore}>Delete</button>
             </form>
         </React.Fragment>
 )
