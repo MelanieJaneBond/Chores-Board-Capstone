@@ -26,13 +26,18 @@ export default class EditChoreForm extends Component {
             date: this.state.date,
             userId: this.state.userId
         }
-        console.log(editedChore)
     this.props
         .editForm(editedChore)
         //the ".editForm" function is being called from APPVIEWS. After it exocutes, the activity will come back here
         //and after it does the "edit form" activity, you want it to re-insert the list of chores into the DOM using
         //this.props.history.push
         //You used to have this part in APPVIEWS inside the edit call but really you need it to happen AFTER that.
+        .then(() => this.props.history.push("/home"))
+    }
+
+    deleteChore = evt => {
+        evt.preventDefault()
+        this.props.deleteChore(this.props.match.params.choresId)
         .then(() => this.props.history.push("/home"))
     }
 
@@ -49,6 +54,7 @@ componentDidMount() {
 //you're telling javascript to match the parameter in the URL and call it "choresId"
 
 render() {
+    console.log(this.props.match.params.choreId)
     return (
         <React.Fragment>
             <form>
@@ -65,7 +71,7 @@ render() {
                     <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.editForm}>Save</button>
-                <button onClick={this.delete}>Delete</button>
+                <button onClick={this.props.deleteChore}>Delete</button>
             </form>
         </React.Fragment>
 )

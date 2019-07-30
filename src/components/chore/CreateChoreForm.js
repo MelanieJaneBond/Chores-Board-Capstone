@@ -18,8 +18,8 @@ export default class CreateChoreForm extends Component {
         this.setState(stateToChange);
       }
 
-      constructNewChore = inputChore => {
-        inputChore.preventDefault();
+      constructNewChore = evt => {
+        evt.preventDefault();
           const newChore = {
             activity: this.state.activity,
             materials: this.state.materials,
@@ -29,7 +29,14 @@ export default class CreateChoreForm extends Component {
         this.props
             .addChore(newChore)
             .then(() => this.props.history.push("/home"));
-    }
+        }
+
+    //    deleteChore = evt => {
+    //        evt.preventDefault()
+    //         this.props.deleteChore(WHICHONE)
+    //             this.props.history.push("/home")
+    //    }
+
           render() {
               return (
                   <React.Fragment>
@@ -47,6 +54,7 @@ export default class CreateChoreForm extends Component {
                     <input type="date" id="date" required onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.constructNewChore}>Save</button>
+                <button onClick={this.deleteChore}>Delete</button>
             </form>
             </React.Fragment>
               )}

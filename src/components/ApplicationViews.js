@@ -37,6 +37,17 @@ getChores = (chores) => {
       }))
   }
 
+  deleteChore = (id) => {
+      return APImanager.delete("chores", parseInt(id))
+      .then(() => APImanager.all("chores")
+      .then(chores => {
+        this.setState({
+          chores: chores
+        })
+    }))
+}
+
+
 componentDidMount() {
     const newState = {}
     fetch("http://localhost:5002/chores")
@@ -52,12 +63,12 @@ render() {
             return <CreateChoreForm {...props} addChore={this.addChore} />      
         }} />
         <Route path="/home" render={props => {
-            return <SavedChores {...props} chores={this.state.chores} />
+            return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore}/>
         }} />
         <Route
           exact path="/edit/:choresId(\d+)" render={props => {
               let chosenChore = this.state.chores.find(one => one.id === parseInt(props.match.params.choresId))
-            return <EditChoreForm {...props} chores={chosenChore} editForm={this.editForm} />
+            return <EditChoreForm {...props} chores={chosenChore} editForm={this.editForm} deleteChore={this.deleteChore} />
           }}
         />
         </React.Fragment>

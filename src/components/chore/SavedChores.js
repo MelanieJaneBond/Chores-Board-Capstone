@@ -19,6 +19,7 @@ return (
                     <h6>{each.date}</h6>
                 </div>
                 <button onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
+                <button onClick={() => this.props.deleteChore(each.id)}>This Chore is DONE!</button>
             </div>
         </div>
         )}
