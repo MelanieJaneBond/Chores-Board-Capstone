@@ -31,30 +31,23 @@ export default class CreateChoreForm extends Component {
             .then(() => this.props.history.push("/home"));
         }
 
-    //    deleteChore = evt => {
-    //        evt.preventDefault()
-    //         this.props.deleteChore(WHICHONE)
-    //             this.props.history.push("/home")
-    //    }
-
           render() {
               return (
                   <React.Fragment>
             <form>
                 <div className="chore-form-div">
-                    <label htmlFor="activity">Title this Chore</label>
+                    <label htmlFor="activity">Title this Chore: </label>
                     <input type="text" id="activity" required onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
-                    <label htmlFor="materials">Materials Needed for this Chore</label>
+                    <label htmlFor="materials">Materials Needed for this Chore: </label>
                     <input type="text" id="materials" required onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
-                    <label htmlFor="due-date">Do-By Date</label>
+                    <label htmlFor="due-date">Do-By: </label>
                     <input type="date" id="date" required onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.constructNewChore}>Save</button>
-                <button onClick={this.deleteChore}>Delete</button>
             </form>
             </React.Fragment>
               )}

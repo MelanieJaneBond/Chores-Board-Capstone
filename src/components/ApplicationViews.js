@@ -22,7 +22,7 @@ getChores = (chores) => {
         .then(() => APImanager.all("chores"))
         .then(choreData =>
             this.setState({
-              events: choreData 
+              chores: choreData 
         })
     );
   }
