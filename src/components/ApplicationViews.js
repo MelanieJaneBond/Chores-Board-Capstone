@@ -5,17 +5,35 @@ import CreateChoreForm from "./chore/CreateChoreForm"
 import APImanager from "./modules/APImanager"
 import SavedChores from "./chore/SavedChores"
 import EditChoreForm from "./chore/EditChoreForm"
+import Register from "./welcome/Register"
+import Login from "./welcome/Login"
 
 export default class ApplicationViews extends Component {
-    state = {
-        chores: []
-    }
+  state = {
+      chores: [],
+      users: [],
+      userId: ""
+  }
+    
+  componentDidMount() {
+    let currentUserId = sessionStorage.getItem("userId")
+    this.loadAllData(currentUserId)
+  }
+  
+  loadAllData = (currentUserId) => {
+    const newState = {}
+    APImanager.get("chores", currentUserId)
+      .then(chores => (newState.chores = chores))
+      .then(() => APImanager.all(this.state.users))
+      .then(users => (newState.users = users))
+      .then(() => this.setState(newState))
+  }
 
-
-getChores = (chores) => {
+  getChores = (chores) => {
     APImanager.all(chores)
     .then(choresData => this.setState({chores: choresData}))
   }
+
 
   addChore = (choreObj) => {
     return APImanager.post("chores", choreObj)
@@ -45,32 +63,36 @@ getChores = (chores) => {
           chores: chores
         })
     }))
-}
+  }
 
 
-componentDidMount() {
-    const newState = {}
-    fetch("http://localhost:5002/chores")
-    .then(r => r.json())
-    .then(chores => (newState.chores = chores))
-    .then(() => this.setState(newState))
-}
+  onLogin = () => {
+    this.setState ({
+      userId: sessionStorage.getItem("userId")
+    })
+    this.loadAllData(this.state.userId)
+   }
 
 render() {
     return (
       <React.Fragment>
+        <Route path="/welcome" render={props => {
+            return <Login {...props} />
+        }} />
+        <Route path="/welcome" redner={props => {
+            return <Register {...props} />
+        }} />
         <Route path="/home" render={props => {
             return <CreateChoreForm {...props} addChore={this.addChore} />      
         }} />
         <Route path="/home" render={props => {
-            return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore}/>
+            return <SavedChores {...props} chores={this.state.chores} users={this.state.users} deleteChore={this.deleteChore}/>
         }} />
         <Route
           exact path="/edit/:choresId(\d+)" render={props => {
               let chosenChore = this.state.chores.find(one => one.id === parseInt(props.match.params.choresId))
             return <EditChoreForm {...props} chores={chosenChore} editForm={this.editForm} deleteChore={this.deleteChore} />
-          }}
-        />
+          }} />
         </React.Fragment>
         )
     }

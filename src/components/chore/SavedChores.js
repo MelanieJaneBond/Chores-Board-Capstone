@@ -3,7 +3,8 @@ import "./Chore.css"
 
 export default class SavedChores extends Component {
     state = {
-        chores: []
+        chores: [],
+        users: []
     }
 
 render() {
