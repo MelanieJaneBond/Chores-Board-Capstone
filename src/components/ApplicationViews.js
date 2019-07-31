@@ -22,7 +22,7 @@ export default class ApplicationViews extends Component {
   
   loadAllData = (currentUserId) => {
     const newState = {}
-    APImanager.get("chores", currentUserId)
+    APImanager.get("chores", parseInt(currentUserId))
       .then(chores => (newState.chores = chores))
       .then(() => APImanager.all(this.state.users))
       .then(users => (newState.users = users))
@@ -77,10 +77,10 @@ render() {
     return (
       <React.Fragment>
         <Route path="/welcome" render={props => {
-            return <Login {...props} />
+            return <Login {...props} users={this.state.users} />
         }} />
         <Route path="/welcome" redner={props => {
-            return <Register {...props} />
+            return <Register {...props} users={this.state.users}/>
         }} />
         <Route path="/home" render={props => {
             return <CreateChoreForm {...props} addChore={this.addChore} />      

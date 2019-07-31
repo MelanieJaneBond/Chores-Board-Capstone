@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import "./Welcome.css"
+import APImanager from '../modules/APImanager';
 
 export default class Login extends Component {
 
     state = {
-        userName: "",
+        username: "",
         password: ""
     }
 
@@ -17,20 +18,19 @@ export default class Login extends Component {
     handleLogin = (event) => {
         event.preventDefault();
 
-        fetch("http://localhost:5002/users")
-            .then(response => response.json())
-            .then(userList => {
-                let tempUserName = userList.find(each => 
-                    each.userName.toLowerCase() === this.state.userName.toLowerCase() && each.password.toLowerCase() === this.state.password.toLowerCase())
-                if (tempUserName) {
-                    sessionStorage.setItem("userId", tempUserName.id)
-                    this.props.onLogin();
-                    this.props.history.push("/home")
-                } else {
-                    window.alert("Invalid login information. Please try again or register a new account.")
-                }
+    APImanager.all(this.props.users)
+        .then(userList => {
+        let tempUserName = userList.find(each => 
+            each.username.toLowerCase() === this.state.username.toLowerCase()
+            && each.password.toLowerCase() === this.state.password.toLowerCase())
+        if (tempUserName) {
+            sessionStorage.setItem("userId", tempUserName.id)
+            this.props.onLogin();
+            this.props.history.push("/home")
+            } else {
+                window.alert("Invalid login information. Please try again or register a new account.")
+            }
             })
-
     }
 
     render() {
@@ -41,7 +41,7 @@ export default class Login extends Component {
                     <div className="card-body">
                         <label htmlFor="userNameInput">Username: </label>
                         <input onChange={this.handleFieldChange}           type="text"
-                            id="userName"
+                            id="username"
                             placeholder="Username"
                             required
                             autoFocus=""

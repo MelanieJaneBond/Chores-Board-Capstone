@@ -18,7 +18,7 @@ export default class Register extends Component {
 
         APImanager.all()
         .then(userList => {
-            let isMatch = userList.find(user => user.userName.toLowerCase() === this.state.username.toLowerCase())
+            let isMatch = userList.find(user => user.username.toLowerCase() === this.state.username.toLowerCase())
             if(isMatch){
                 window.alert("This username already exists! Please go back to login page.")
             } else if (userList.find(user => user.password.toLowerCase() === this.state.password.toLowerCase())) {
@@ -27,13 +27,13 @@ export default class Register extends Component {
                 window.alert("You left a field blank!")
             } else {
                 let newUser = {
-                    userName: this.state.username,
+                    username: this.state.username,
                     password: this.state.password
                 }
                 this.props.registerUser(newUser)
-                .then(() => APImanager.all())
-                .then(r => r.find(user => user.userName === this.state.username))
-                .then(matchedUserInfo => sessionStorage.setItem("userID", matchedUserInfo.id))
+                .then(() => APImanager.all(this.props.users))
+                .then(r => r.find(user => user.username === this.state.username))
+                .then(matchedUserInfo => sessionStorage.setItem("userId", matchedUserInfo.id))
                 .then(() => this.props.onLogin())
                 .then(() => this.props.history.push("/home"))
             }
@@ -46,7 +46,7 @@ export default class Register extends Component {
                 <form>
                     <h1 className="card-header">Register New Account</h1>
                     <div className="card-body">
-                        <label htmlFor="userName">Username: </label>
+                        <label htmlFor="username">Username: </label>
                         <input onChange={this.handleChange} type="text"
                             id="username"
                             placeholder="Username"
