@@ -7,21 +7,39 @@ export default class Register extends Component {
         password: ""
     }
 
-    handleChange = (event) => {
+    handleFieldChange = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
     }
 
+    handleLogin = (event) => {
+        event.preventDefault();
+
+    APImanager.all("users")
+        .then(userList => {
+        let tempUserName = userList.find(each => 
+            each.username.toLowerCase() === this.state.username.toLowerCase()
+            && each.password.toLowerCase() === this.state.password.toLowerCase())
+        if (tempUserName) {
+            sessionStorage.setItem("userId", tempUserName.id)
+            this.props.onLogin();
+            this.props.history.push("/home")
+            } else {
+                window.alert("Invalid login information. Please try again or register a new account.")
+            }
+            })
+    }
+
     handleRegister = (event) => {
         event.preventDefault()
-
-        APImanager.all()
+        
+        APImanager.all("users")
         .then(userList => {
-            let isMatch = userList.find(user => user.username.toLowerCase() === this.state.username.toLowerCase())
+            let isMatch = userList.find(each => each.username.toLowerCase() === this.state.username.toLowerCase())
             if(isMatch){
                 window.alert("This username already exists! Please go back to login page.")
-            } else if (userList.find(user => user.password.toLowerCase() === this.state.password.toLowerCase())) {
+            } else if (userList.find(each => each.password.toLowerCase() === this.state.password.toLowerCase())) {
                 window.alert("This password already exists") 
             } else if(this.state.username === "" || this.state.password === ""){
                 window.alert("You left a field blank!")
@@ -31,7 +49,7 @@ export default class Register extends Component {
                     password: this.state.password
                 }
                 this.props.registerUser(newUser)
-                .then(() => APImanager.all(this.props.users))
+                .then(() => APImanager.all("users"))
                 .then(r => r.find(user => user.username === this.state.username))
                 .then(matchedUserInfo => sessionStorage.setItem("userId", matchedUserInfo.id))
                 .then(() => this.props.onLogin())
@@ -39,23 +57,23 @@ export default class Register extends Component {
             }
         })
     }
-
+    
     render() {
-        return (
+    return (
             <div className="card">
-                <form>
-                    <h1 className="card-header">Register New Account</h1>
+                <form onSubmit={this.handleLogin}>
+                    <h1 className="card-header">Sign In</h1>
                     <div className="card-body">
-                        <label htmlFor="username">Username: </label>
-                        <input onChange={this.handleChange} type="text"
+                        <label htmlFor="userNameInput">Username: </label>
+                        <input onChange={this.handleFieldChange} type="text"
                             id="username"
                             placeholder="Username"
                             required
                             autoFocus=""
                             className="form-control mb-2"
                         />
-                        <label htmlFor="emailInput">Email: </label>
-                        <input onChange={this.handleChange} type="text"
+                        <label htmlFor="passwordInput">Password: </label>
+                        <input onChange={this.handleFieldChange} type="text"
                         id="password"
                         placeholder="Password"
                         required
@@ -63,15 +81,14 @@ export default class Register extends Component {
                         />
                     </div>
                     <div className="card-footer login-button-div">
-                        <button type="submit"
-                        className="btn btn-primary btn-sm login-button"
-                        onClick={this.handleRegister}>Register</button>
-                        {/* <button type="button"
-                        className="btn btn-danger btn-sm"
-                        onClick={() => this.props.history.push("/login")}>Go Back</button> */}
+                        <button className="btn btn-primary btn-sm login-button"
+                        onClick={this.handleLogin}>Sign In</button>
+                        <button id="reg" className="btn btn-info btn-sm login-button"
+                        onClick={this.handleRegister}>Register New Account</button>
                     </div>
                 </form>
             </div>
         )
     }
+
 }
