@@ -41,7 +41,7 @@ export default class Register extends Component {
                 window.alert("This username already exists! Please go back to login page.")
             } else if (userList.find(each => each.password.toLowerCase() === this.state.password.toLowerCase())) {
                 window.alert("This password already exists") 
-            } else if(this.state.username === "" || this.state.password === ""){
+            } else if(this.state.username === "" || this.state.password === "") {
                 window.alert("You left a field blank!")
             } else {
                 let newUser = {

@@ -21,10 +21,11 @@ export default class ApplicationViews extends Component {
   
   loadAllData = (currentUserId) => {
     const newState = {}
-    APImanager.get("chores", currentUserId)
-      .then(chores => (newState.chores = chores))
-      .then(() => APImanager.all(this.state.users))
-      .then(users => (newState.users = users))
+    APImanager.getChoresByUserId("chores", currentUserId)
+      .then(chores => {
+        console.log(chores)
+        return newState.chores = chores
+      })
       .then(() => this.setState(newState))
   }
 
@@ -72,7 +73,6 @@ export default class ApplicationViews extends Component {
     }))
     }
 
-
   onLogin = () => {
     this.setState ({
       userId: sessionStorage.getItem("userId")
@@ -98,7 +98,7 @@ render() {
 
         <Route path="/home" render={props => {
              if (this.isAuthenticated()) {
-              return <SavedChores {...props} chores={this.state.chores} users={this.state.users} deleteChore={this.deleteChore}/>
+              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore}/>
             } else {
               return <Redirect to="/welcome" />     
         }}} />

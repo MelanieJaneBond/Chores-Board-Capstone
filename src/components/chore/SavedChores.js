@@ -2,10 +2,6 @@ import React, { Component } from "react"
 import "./Chore.css"
 
 export default class SavedChores extends Component {
-    state = {
-        chores: [],
-        users: []
-    }
 
 render() {
 return (
