@@ -24,7 +24,7 @@ export default class EditChoreForm extends Component {
             activity: this.state.activity,
             materials: this.state.materials,
             date: this.state.date,
-            userId: this.state.userId
+            userId: Number(sessionStorage.getItem("userId"))
         }
     this.props
         .editForm(editedChore)

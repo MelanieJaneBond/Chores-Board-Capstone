@@ -1,4 +1,26 @@
 {
+  "users": [
+    {
+      "username": "mjb",
+      "password": "mjb",
+      "id": 1
+    },
+    {
+      "username": "Jordan",
+      "password": "Jordan",
+      "id": 2
+    },
+    {
+      "username": "jake",
+      "password": "Ben",
+      "id": 3
+    },
+    {
+      "username": "Allen",
+      "password": "Allen",
+      "id": 4
+    }
+  ],
   "chores": [
     {
       "id": 1,
@@ -11,8 +33,29 @@
       "id": 2,
       "activity": "Wipe off Countertops",
       "materials": "paper towels, windex",
-      "date": "1990-12-15",
-      "userId": ""
+      "date": "2020-12-15",
+      "userId": 1
+    },
+    {
+      "activity": "Clean the Bathroom",
+      "materials": "tons of things...",
+      "date": "2020-08-02",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "activity": "Let the Dog Out",
+      "materials": "Stay in view of dog while she is outside",
+      "date": "2324-02-22",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "activity": "Mop the Kitchen",
+      "materials": "tons of things...",
+      "date": "1212-09-12",
+      "userId": 4,
+      "id": 5
     }
   ]
 }

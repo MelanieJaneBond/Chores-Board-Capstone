@@ -12,9 +12,10 @@ export default class NavBar extends Component {
                         <Link className="nav-link" to="/home">The Chores Board</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Welcome</Link>
+                        <Link className="nav-link" to="/welcome">Welcome</Link>
                     </li>
                 </ul>
+                <Link className="mr-1" onClick={() => sessionStorage.clear()} to="/">Logout</Link>
             </nav>
         )
     }

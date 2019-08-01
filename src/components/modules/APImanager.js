@@ -1,12 +1,19 @@
 const remoteURL = "http://localhost:5002";
 
 export default {
+  getChoresByUserId(path, id) {
+    return fetch(`${remoteURL}/${path}?userId=${id}`)
+    .then(e => e.json())
+  },
+
   get(resource, id) {
-    return fetch(`${remoteURL}/${resource}/${id}`).then(e => e.json());
+    return fetch(`${remoteURL}/${resource}/${id}`)
+    .then(e => e.json());
   },
   
   all(resource) {
-    return fetch(`${remoteURL}/${resource}`).then(r => r.json());
+    return fetch(`${remoteURL}/${resource}`)
+    .then(r => r.json());
   },
 
   post(resource, resourceObj) {
