@@ -29,20 +29,14 @@ export default class ApplicationViews extends Component {
       .then(() => this.setState(newState))
   }
 
-  getChores = (chores) => {
-    APImanager.all(chores)
-    .then(choresData => this.setState({chores: choresData}))
-  }
-
-
   addChore = (choreObj) => {
     return APImanager.post("chores", choreObj)
-        .then(() => APImanager.all("chores"))
-        .then(choreData =>
+        .then(() => APImanager.getChoresByUserId("chores", choreObj.userId))
+        .then(choresOfUser =>
             this.setState({
-              chores: choreData 
+              chores: choresOfUser 
         })
-    );
+    )
   }
 
   editForm = (choreToEdit) => {

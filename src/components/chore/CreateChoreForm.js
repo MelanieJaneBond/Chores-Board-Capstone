@@ -35,16 +35,17 @@ export default class CreateChoreForm extends Component {
               return (
                   <React.Fragment>
             <form>
+              <h4 className="heading">New Chore :</h4>
                 <div className="chore-form-div">
-                    <label htmlFor="activity">Title this Chore: </label>
-                    <input type="text" id="activity" required onChange={this.handleFieldChange}/>
+                    <label htmlFor="activity"></label>
+                    <input type="text" id="activity" required placeholder="Title your chore..." onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
-                    <label htmlFor="materials">Materials Needed for this Chore: </label>
-                    <input type="text" id="materials" required onChange={this.handleFieldChange}/>
+                    <label htmlFor="materials"></label>
+                    <input type="text" id="materials" required placeholder="Materials..." onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
-                    <label htmlFor="due-date">Do-By: </label>
+                    <label htmlFor="due-date">When would you like it done?</label>
                     <input type="date" id="date" required onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.constructNewChore}>Save</button>
