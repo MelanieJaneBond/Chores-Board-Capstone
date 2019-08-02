@@ -3,32 +3,28 @@ import "./Chore.css"
 
 export default class SavedChores extends Component {
 
-sortingByDate = () => {
-    let now = Date.now()
-    let arrayOfDates = this.props.chores.map(each => { return Date.parse(each.date) })
-    arrayOfDates.push(now)
-    arrayOfDates.sort((a,b) => a-b)
-    // let dateInQuestion = new Date(now)
+// sortingByDate = () => {
+//     let now = Date.now()
+//     let arrayOfDates = this.props.chores.map(each => { return Date.parse(each.date) })
+//     arrayOfDates.push(now)
+//     arrayOfDates.sort((a,b) => a-b)
+//     arrayOfDates.forEach(one => {
 
-    let dateAfterIndex = arrayOfDates.indexOf(now) + 1
-    let upComingDate = new Date(arrayOfDates[dateAfterIndex])
-    let findDate = this.props.chores.find(each => Date.parse(each.date) === Date.parse(upComingDate))
-    return findDate
-}
+
+// })
 
 render() {
 return (
 <React.Fragment>
     <section className="chore">
         <h4 className="heading">To Do List :</h4>
-        {this.props.chores.map(each =>
+        {this.props.chores.sort((a,b) => {
+            const firstChoreInArray = Date.parse(a.date)
+            const secondChoreInArray = Date.parse(b.date)
+            return secondChoreInArray - firstChoreInArray
+        }).map(each =>
         <div key={each.id} className="chore-card">
             <div className="chore-card-body">
-                {
-                    (each === this.sortingByDate()) ?
-                    (<h1 className="card-title">{each.activity}</h1>) :
-                    (<h5 className="card-title">{each.activity}</h5>)
-                }
                 <div className="chore-card">
                     <h5>{each.activity}</h5>
                     <h6>{each.materials}</h6>

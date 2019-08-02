@@ -6,6 +6,7 @@ import APImanager from "./modules/APImanager"
 import SavedChores from "./chore/SavedChores"
 import EditChoreForm from "./chore/EditChoreForm"
 import Register from "./welcome/Register"
+import WelcomeMessage from "./welcome/Message"
 
 export default class ApplicationViews extends Component {
   state = {
@@ -79,6 +80,10 @@ export default class ApplicationViews extends Component {
 render() {
     return (
       <React.Fragment>
+        <Route exact path="/" render={props => {
+          return <WelcomeMessage {...props} />
+        }} />
+
         <Route path="/welcome" render={props => {
             return <Register {...props} users={this.state.users} onLogin={this.onLogin} registerUser={this.registerUser} />
         }} />
@@ -87,14 +92,14 @@ render() {
             if (this.isAuthenticated()) {
               return <CreateChoreForm {...props} addChore={this.addChore} />
             } else {
-              return <Redirect to="/welcome" />     
+              return <Redirect to="/" />     
         }}} />
 
         <Route path="/home" render={props => {
              if (this.isAuthenticated()) {
               return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore}/>
             } else {
-              return <Redirect to="/welcome" />     
+              return <Redirect to="/" />     
         }}} />
 
         <Route
