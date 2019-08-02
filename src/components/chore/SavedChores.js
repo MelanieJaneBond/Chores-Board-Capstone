@@ -3,16 +3,6 @@ import "./Chore.css"
 
 export default class SavedChores extends Component {
 
-// sortingByDate = () => {
-//     let now = Date.now()
-//     let arrayOfDates = this.props.chores.map(each => { return Date.parse(each.date) })
-//     arrayOfDates.push(now)
-//     arrayOfDates.sort((a,b) => a-b)
-//     arrayOfDates.forEach(one => {
-
-
-// })
-
 render() {
 return (
 <React.Fragment>
@@ -21,7 +11,7 @@ return (
         {this.props.chores.sort((a,b) => {
             const firstChoreInArray = Date.parse(a.date)
             const secondChoreInArray = Date.parse(b.date)
-            return secondChoreInArray - firstChoreInArray
+            return firstChoreInArray - secondChoreInArray
         }).map(each =>
         <div key={each.id} className="chore-card">
             <div className="chore-card-body">

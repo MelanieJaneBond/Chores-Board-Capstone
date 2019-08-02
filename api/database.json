@@ -80,6 +80,20 @@
       "date": "2019-08-02",
       "userId": 2,
       "id": 7
+    },
+    {
+      "activity": "Wipe off Countertops",
+      "materials": "paper towels",
+      "date": "2019-08-02",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "activity": "Mow the Lawn",
+      "materials": "machinery and stamina",
+      "date": "2019-08-05",
+      "userId": 1,
+      "id": 9
     }
   ]
 }
