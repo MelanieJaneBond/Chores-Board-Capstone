@@ -9,3 +9,6 @@
     color: white;
   }
   
+  .card {
+    max-width: 30%;
+  }

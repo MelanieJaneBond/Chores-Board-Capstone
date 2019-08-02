@@ -30,31 +30,28 @@ export default class CreateChoreForm extends Component {
         this.props
             .addChore(newChore)
             .then(() => this.props.history.push("/home"));
-            // clearInputFields()
         }
         
-
           render() {
               return (
                   <React.Fragment>
             <form>
-              <h4 className="heading">New Chore :</h4>
-                <div className="chore-form-div">
-                    <label htmlFor="activity"></label>
-                    <input type="text" id="activity" required placeholder="Title your chore..."
-                    ref={el => this.inputActivity = el} onChange={this.handleFieldChange}/>
+              <div className="card text-white bg-danger mb-3">
+              <h4 className="card-title">New Chore :</h4>
+                <div className="card-body">
+                    <input className="card-text" type="text" id="activity" required
+                    placeholder="Title your chore..." onChange={this.handleFieldChange}/>
                 </div>
-                <div className="chore-form-div">
-                    <label htmlFor="materials"></label>
-                    <input type="text" id="materials" required placeholder="Materials..." 
-                    ref={el => this.inputMaterials = el} onChange={this.handleFieldChange}/>
+                <div className="card-body">
+                    <input className="card-text" type="text" id="materials" required placeholder="Materials..." onChange={this.handleFieldChange}/>
                 </div>
-                <div className="chore-form-div">
-                    <label htmlFor="due-date">When would you like it done?</label>
+                <div className="chore-card-body">
+                    <label className="card-text">When would you like it done?</label>
                     <input type="date" id="date" required onChange={this.handleFieldChange}/>
                 </div>
                 <button onClick={this.constructNewChore}>Save</button>
+                </div>
             </form>
-            </React.Fragment>
+                </React.Fragment>
               )}
-}
+              }

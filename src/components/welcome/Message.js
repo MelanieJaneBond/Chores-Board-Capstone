@@ -5,12 +5,13 @@ export default class WelcomeMessage extends Component {
     render() {
         return (
         <React.Fragment>
-            <section className="chore">
-                <h1 className="heading">The Chores Board</h1>
-                    <div className="chore-card-body">
-                        <div className="chore-card">
+            <section className="card text-white bg-danger mb-3">
+                <h1 className="card-title">The Chores Board</h1>
+                    <div className="card-body">
+                        <div className="card-title">
                             <p>Climb out of your filth and grime;</p>
-                            <p>get your chores done on time with <strong>The Chores Board</strong> !</p>
+                            <p>get your chores done on time</p>
+                            <p>with <strong>The Chores Board</strong> !</p>
                         </div>
                         <h5>Sign in or Create and Account :</h5>
                         <button onClick={() => this.props.history.push(`/welcome`)}>Here</button>
@@ -19,3 +20,4 @@ export default class WelcomeMessage extends Component {
         </React.Fragment>
         )}
 }
+
