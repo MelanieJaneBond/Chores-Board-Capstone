@@ -1,7 +1,19 @@
 import React, { Component } from "react"
 import "./Chore.css"
+import APImanager from "../modules/APImanager";
 
 export default class SavedChores extends Component {
+
+loadUsersChores = evt => {
+    evt.preventDefault();
+    APImanager.getChoresByUserId("userId")
+    .then(choresOfUser =>
+        this.setState({
+          chores: choresOfUser 
+    })
+)
+    this.props.history.push("/home")
+}
 
 render() {
 return (
@@ -21,7 +33,7 @@ return (
                     <h6>{each.date}</h6>
                 </div>
                 <button onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
-                <button onClick={() => this.props.deleteChore(each.id)}>This Chore is DONE!</button>
+                <button onClick={() => this.props.deleteChore(each.id, each.userId)}>This Chore is DONE!</button>
             </div>
         </div>
         )}

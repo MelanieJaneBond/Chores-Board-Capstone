@@ -8,9 +8,6 @@ export default class CreateChoreForm extends Component {
         date: "",
         userId: ""
       }
-
-      //right now it is still intaking the userId as a string and not a number
-      //lets see if we can fix that next
       
       handleFieldChange = evt => {
         const stateToChange = {};
@@ -25,11 +22,17 @@ export default class CreateChoreForm extends Component {
             materials: this.state.materials,
             date: this.state.date,
             userId: Number(sessionStorage.getItem("userId"))
-          };
+          }
+          // clearInputFields = () => {
+          //   let freshForm = document.querySelector("#activity").value
+          //   return freshForm.innerHTML = ""
+          // }
         this.props
             .addChore(newChore)
             .then(() => this.props.history.push("/home"));
+            // clearInputFields()
         }
+        
 
           render() {
               return (
@@ -38,11 +41,13 @@ export default class CreateChoreForm extends Component {
               <h4 className="heading">New Chore :</h4>
                 <div className="chore-form-div">
                     <label htmlFor="activity"></label>
-                    <input type="text" id="activity" required placeholder="Title your chore..." onChange={this.handleFieldChange}/>
+                    <input type="text" id="activity" required placeholder="Title your chore..."
+                    ref={el => this.inputActivity = el} onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
                     <label htmlFor="materials"></label>
-                    <input type="text" id="materials" required placeholder="Materials..." onChange={this.handleFieldChange}/>
+                    <input type="text" id="materials" required placeholder="Materials..." 
+                    ref={el => this.inputMaterials = el} onChange={this.handleFieldChange}/>
                 </div>
                 <div className="chore-form-div">
                     <label htmlFor="due-date">When would you like it done?</label>

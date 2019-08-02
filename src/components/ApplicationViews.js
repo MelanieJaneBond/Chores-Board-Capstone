@@ -40,6 +40,11 @@ export default class ApplicationViews extends Component {
     )
   }
 
+  // clearInputFields = () => {
+  //   let freshForm = document.querySelector("#activity").value
+  //   return freshForm.innerHTML = ""
+  // }
+
   editForm = (choreToEdit) => {
     return APImanager.put("chores", choreToEdit)
       .then(() => APImanager.all("chores")
@@ -50,16 +55,15 @@ export default class ApplicationViews extends Component {
       }))
   }
 
-  deleteChore = (id) => {
-      return APImanager.delete("chores", id)
-      .then(() => APImanager.all("chores")
-      .then(chores => {
-        this.setState({
-          chores: chores
+  deleteChore = (id, userId) => {
+      return APImanager.removeAndList("chores", id, userId)
+        .then(choresOfUser => {
+          this.setState({
+            chores: choresOfUser
+          })
         })
-    }))
-  }
-  
+      }
+
   registerUser = (userToRegister) => {
     return APImanager.post("users", userToRegister)
     .then(() => APImanager.all("users"))
@@ -97,7 +101,7 @@ render() {
 
         <Route path="/home" render={props => {
              if (this.isAuthenticated()) {
-              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore}/>
+              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore} />
             } else {
               return <Redirect to="/" />     
         }}} />

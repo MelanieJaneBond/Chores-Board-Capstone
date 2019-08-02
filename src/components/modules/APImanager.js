@@ -6,6 +6,11 @@ export default {
     .then(e => e.json())
   },
 
+  removeAndList(resource, id, userId) {
+    return this.delete(resource, id)
+    .then( () => this.getChoresByUserId("chores", userId))
+},
+
   get(resource, id) {
     return fetch(`${remoteURL}/${resource}/${id}`)
     .then(e => e.json());
