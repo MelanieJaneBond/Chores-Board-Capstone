@@ -47,7 +47,7 @@ export default class ApplicationViews extends Component {
 
   editForm = (choreToEdit) => {
     return APImanager.put("chores", choreToEdit)
-      .then(() => APImanager.all("chores")
+      .then(() => APImanager.getChoresByUserId("chores", choreToEdit.userId)
       .then(chores => {
         this.setState({
           chores: chores
