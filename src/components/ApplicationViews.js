@@ -5,7 +5,7 @@ import CreateChoreForm from "./chore/CreateChoreForm"
 import APImanager from "./modules/APImanager"
 import SavedChores from "./chore/SavedChores"
 import EditChoreForm from "./chore/EditChoreForm"
-import Register from "./welcome/Register"
+import Register from "./welcome/LoginAndRegister"
 import WelcomeMessage from "./welcome/Message"
 
 export default class ApplicationViews extends Component {

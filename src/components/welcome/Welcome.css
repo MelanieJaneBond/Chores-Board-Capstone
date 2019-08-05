@@ -1,26 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Delius&display=swap');
 
 section h4 {
     display: inline;
     font-family: 'Permanent Marker', cursive;
   }
 
-  form h4 {
-    display: inline;
+  .sign-in {
     font-family: 'Permanent Marker', cursive;
   }
 
-  .card {
-    max-width: 30%;
+  .form {
+    padding-top: 3%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 45%;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     background: url(yellow-ruled-personal_2.jpg) no-repeat;
     background-size: cover;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Delius', cursive;
   }
 
   .btn {

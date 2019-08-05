@@ -8,6 +8,10 @@
     flex-direction: column;
   }
 
+  label {
+    font-family: 'Permanent Marker', cursive;
+  }
+
   .chore {
     display: flex;
     flex-direction: row;
@@ -16,6 +20,7 @@
   }
 
   .form {
+    font-family: 'Permanent Marker', cursive;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,13 +43,14 @@
     font-family: 'Permanent Marker', cursive;
   }
 
-  #saver {
-    background-color: white;
-  }
-
   .btn {
-    display: flex;
     font-family: 'Permanent Marker', cursive;
   }
 
-  /* background: url("cork-board-background-2") no-repeat; */
+  .message-end {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }

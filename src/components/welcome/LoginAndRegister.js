@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import APImanager from "../modules/APImanager"
+import "./Welcome.css"
 
 export default class Register extends Component {
     state = {
@@ -60,35 +61,33 @@ export default class Register extends Component {
     
     render() {
     return (
+        <section className="form">
             <div className="card">
                 <form onSubmit={this.handleLogin}>
-                    <h1 className="card-header">Sign In</h1>
+                    <h1 className="message-end">Sign In</h1>
                     <div className="card-body">
-                        <label htmlFor="userNameInput">Username: </label>
+                        <label className="sign-in">Username: </label>
                         <input onChange={this.handleFieldChange} type="text"
                             id="username"
-                            placeholder="Username"
                             required
                             autoFocus=""
                             className="form-control mb-2"
                         />
-                        <label htmlFor="passwordInput">Password: </label>
+                        <label className="sign-in">Password: </label>
                         <input onChange={this.handleFieldChange} type="text"
                         id="password"
-                        placeholder="Password"
                         required
                         className="form-control"
                         />
                     </div>
                     <div className="card-footer login-button-div">
-                        <button className="btn btn-primary btn-sm login-button"
+                        <button className="btn btn-primary login-button"
                         onClick={this.handleLogin}>Sign In</button>
-                        <button id="reg" className="btn btn-info btn-sm login-button"
+                        <button id="reg" className="btn btn-info login-button"
                         onClick={this.handleRegister}>Register New Account</button>
                     </div>
                 </form>
             </div>
-        )
-    }
-
-}
+        </section>
+    )
+}}
