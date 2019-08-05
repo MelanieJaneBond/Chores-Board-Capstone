@@ -40,32 +40,53 @@
       "id": 2
     },
     {
-      "activity": "Mop the Kitchen",
-      "materials": "hands and brains",
-      "date": "2019-08-02",
-      "userId": 2,
-      "id": 13
-    },
-    {
+      "id": 14,
       "activity": "Take out Trash",
-      "materials": "hands and brains",
+      "materials": "A fresh bag",
       "date": "2019-08-03",
-      "userId": 2,
-      "id": 14
+      "userId": 2
     },
     {
+      "id": 15,
       "activity": "Mop the Kitchen",
       "materials": "hands and brains",
       "date": "2019-08-03",
-      "userId": 1,
-      "id": 15
+      "userId": 1
     },
     {
-      "activity": "Mow the Lawn",
-      "materials": "tons of things...",
-      "date": "2019-08-02",
+      "activity": "Let the Dog Out",
+      "materials": "Stay in view of dog while she is outside",
+      "date": "2019-08-05",
+      "userId": 2,
+      "id": 17
+    },
+    {
+      "id": 18,
+      "activity": "Make the Delete Button Work",
+      "materials": "a hand that doesn't hurt",
+      "date": "2019-08-04",
+      "userId": 2
+    },
+    {
+      "id": 19,
+      "activity": "Let the Dog Out",
+      "materials": "Stay in view of dog while she is outside",
+      "date": "2019-08-05",
+      "userId": 1
+    },
+    {
+      "id": 20,
+      "activity": "Wipe off Countertops",
+      "materials": "paper towels",
+      "date": "2019-09-12",
+      "userId": 1
+    },
+    {
+      "activity": "Sweep the Bathroom",
+      "materials": "Broom, Dustpan",
+      "date": "2019-09-12",
       "userId": 1,
-      "id": 16
+      "id": 21
     }
   ]
 }

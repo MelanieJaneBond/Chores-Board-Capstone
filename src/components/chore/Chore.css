@@ -1,14 +1,50 @@
-  .chore-card {
-    background-color: #282c34;
-    min-height: 10vh;
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+  
+  h4 {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .chore {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .form {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: right;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    justify-content: space-around;
   }
-  
-  .card {
-    max-width: 30%;
+
+  .clickies {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
+
+  .chore-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background: url(yellow-ruled-personal_2.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  #saver {
+    background-color: white;
+  }
+
+  .btn {
+    display: flex;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  /* background: url("cork-board-background-2") no-repeat; */

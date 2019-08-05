@@ -56,23 +56,17 @@ componentDidMount() {
 render() {
     return (
         <React.Fragment>
-            <form>
-                <div className="chore-form-div">
-                    <label htmlFor="activity">Title this Chore</label>
-                    <input type="text" id="activity" required value={this.state.activity} onChange={this.handleFieldChange}/>
-                </div>
-                <div className="chore-form-div">
-                    <label htmlFor="materials">Materials Needed for this Chore</label>
-                    <input type="text" id="materials" required value={this.state.materials} onChange={this.handleFieldChange}/>
-                </div>
-                <div className="chore-form-div">
-                    <label htmlFor="due-date">Do-By Date</label>
-                    <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
-                </div>
-                <button onClick={this.editForm}>Save</button>
-                <button onClick={this.deleteChore}>Delete</button>
+            <form className="form">
+                <section className="card border-danger mb-3">
+                    <div className="card-body">
+                        <input type="text" id="activity" required placeholder="Title your chore..." value={this.state.activity} onChange={this.handleFieldChange}/>
+                        <input type="text" id="materials" required placeholder="List supplies or tools..." value={this.state.materials} onChange={this.handleFieldChange}/>
+                        <label>When would you like it done?</label>
+                        <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
+                    </div>
+                    <button id="saver" className="btn btn-outline-dark btn-sm" onClick={this.editForm}>Save</button>
+                </section>
             </form>
         </React.Fragment>
 )
 }}
-///here's where it changes...
