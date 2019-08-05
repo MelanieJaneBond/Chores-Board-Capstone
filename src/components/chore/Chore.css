@@ -1,11 +1,11 @@
-  section h4 {
-    display: inline;
-    font-family: 'Patrick Hand', cursive;
-  }
-
-  form h4 {
-    display: inline;
-    font-family: 'Patrick Hand', cursive;
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+  
+  h4 {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
 
   .chore {
@@ -13,6 +13,18 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .clickies {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .chore-card {
@@ -23,20 +35,16 @@
     padding: 0;
     background: url(yellow-ruled-personal_2.jpg) no-repeat;
     background-size: cover;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
   }
 
-  /* #form {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  } */
   #saver {
     background-color: white;
   }
+
   .btn {
     display: flex;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
   }
 
   /* background: url("cork-board-background-2") no-repeat; */

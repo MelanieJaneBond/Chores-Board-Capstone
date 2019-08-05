@@ -73,6 +73,20 @@
       "materials": "Stay in view of dog while she is outside",
       "date": "2019-08-05",
       "userId": 1
+    },
+    {
+      "id": 20,
+      "activity": "Wipe off Countertops",
+      "materials": "paper towels",
+      "date": "2019-09-12",
+      "userId": 1
+    },
+    {
+      "activity": "Sweep the Bathroom",
+      "materials": "Broom, Dustpan",
+      "date": "2019-09-12",
+      "userId": 1,
+      "id": 21
     }
   ]
 }

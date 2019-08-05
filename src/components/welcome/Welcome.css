@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 section h4 {
     display: inline;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
   }
 
   form h4 {
     display: inline;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
   }
 
   .card {
@@ -18,11 +20,18 @@ section h4 {
     padding: 0;
     background: url(yellow-ruled-personal_2.jpg) no-repeat;
     background-size: cover;
-    font-family: 'Patrick Hand', cursive;
-
+    font-family: 'Permanent Marker', cursive;
   }
 
   .btn {
     display: flex;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .message-end {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }

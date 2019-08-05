@@ -18,22 +18,24 @@ loadUsersChores = evt => {
 render() {
 return (
 <React.Fragment>
-    <h4 className="card-title">To Do List :</h4>
+    <h4>To Do List :</h4>
         <section className="chore">
         {this.props.chores.sort((a,b) => {
             const firstChoreInArray = Date.parse(a.date)
             const secondChoreInArray = Date.parse(b.date)
             return firstChoreInArray - secondChoreInArray
         }).map(each =>
-        <div id="form" key={each.id} className="card border-warning mb-3">
-            <div>
+        <div key={each.id} className="card border-warning mb-3">
+            <div className="card-body">
                 <div>
                     <h5 className="card-title">{each.activity}</h5>
-                    <h6 className="card-title">{each.materials}</h6>
-                    <h6 className="card-subtitle">{each.date}</h6>
+                    <h6 className="card-text">{each.materials}</h6>
+                    <h6 className="card-text">{each.date}</h6>
                 </div>
-                <button className="btn btn-primary btn-sm" onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
-                <button className="btn btn-info btn-sm" onClick={() => this.props.deleteChore(each.id, each.userId)}>This Chore is DONE!</button>
+                <section className="clickies">
+                    <button className="btn btn-primary btn-sm" onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
+                    <button className="btn btn-info btn-sm" onClick={() => this.props.deleteChore(each.id, each.userId)}>Finished!</button>
+                </section>
             </div>
         </div>
         )}
