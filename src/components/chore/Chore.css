@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
   
-  h4 {
+  h2 {
     font-family: 'Permanent Marker', cursive;
+    text-shadow: 3px 3px black;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    color: white;
   }
 
   label {
@@ -26,6 +28,10 @@
     justify-content: space-around;
   }
 
+  #big-words {
+    font-family: 'Permanent Marker', cursive;
+  }
+  
   .clickies {
     display: flex;
     flex-direction: row;
@@ -45,6 +51,8 @@
 
   .btn {
     font-family: 'Permanent Marker', cursive;
+    margin: 5px;
+    padding: 3px;
   }
 
   .message-end {

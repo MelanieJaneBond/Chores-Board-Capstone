@@ -59,14 +59,18 @@ render() {
             <form className="form">
                 <section className="card border-danger mb-3">
                     <div className="card-body">
-                        <input type="text" id="activity" required placeholder="Title your chore..." 
-                        className="form-control mb-2" value={this.state.activity} onChange={this.handleFieldChange}/>
-                        <input type="text" id="materials" required placeholder="List supplies or tools..." 
-                        className="form-control mb-2" value={this.state.materials} onChange={this.handleFieldChange}/>
-                        <label>When would you like it done?</label>
-                        <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
+                        <label>Title: </label>
+                            <input type="text" id="activity" required placeholder="Title your chore..." 
+                            className="form-control mb-2" value={this.state.activity} onChange={this.handleFieldChange}/>
+                        <label>Materials: </label>
+                            <input type="text" id="materials" required placeholder="List supplies or tools..." 
+                            className="form-control mb-2" value={this.state.materials} onChange={this.handleFieldChange}/>
+                        <label className="message-end">When would you like it done?</label>
+                            <input type="date" id="date" required value={this.state.date} onChange={this.handleFieldChange}/>
+                        <div className="message-end">
+                            <button id="saver" className="btn btn-outline-dark" onClick={this.editForm}>Save</button>
+                        </div>
                     </div>
-                    <button id="saver" className="btn btn-outline-dark btn-sm" onClick={this.editForm}>Save</button>
                 </section>
             </form>
         </React.Fragment>

@@ -6,16 +6,18 @@ import "./NavBar.css"
 export default class NavBar extends Component {
     render() {
         return (
-                <nav className="navbar navbar-light">
-                <ul className="nav nav-pills nav-fill">
-                    <li className="nav-item">
+                <nav className="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav mr-auto">
+                    <li className="nav-item active">
                         <Link className="nav-link" to="/home">The Chores Board</Link>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item active">
                         <Link className="nav-link" to="/welcome">Welcome</Link>
                     </li>
-                </ul>
-                <Link className="mr-1" onClick={() => sessionStorage.clear()} to="/">Logout</Link>
+                    </ul>
+                    <span className="navbar-text">
+                        <Link className="nav-item active" onClick={() => sessionStorage.clear()} to="/">Logout</Link>
+                    </span>
             </nav>
         )
     }

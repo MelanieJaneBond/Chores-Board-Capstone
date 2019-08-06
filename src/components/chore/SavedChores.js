@@ -18,7 +18,7 @@ loadUsersChores = evt => {
 render() {
 return (
 <React.Fragment>
-    <h4>To Do List :</h4>
+    <h2>To Do List :</h2>
         <section className="chore">
         {this.props.chores.sort((a,b) => {
             const firstChoreInArray = Date.parse(a.date)
@@ -28,7 +28,7 @@ return (
         <div key={each.id} className="card border-warning mb-3">
             <div className="card-body">
                 <div>
-                    <h5 className="card-title">{each.activity}</h5>
+                    <h5 id="big-words" className="card-title">{each.activity}</h5>
                     <h6 className="card-text">{each.materials}</h6>
                     <h6 className="card-text">{each.date}</h6>
                 </div>

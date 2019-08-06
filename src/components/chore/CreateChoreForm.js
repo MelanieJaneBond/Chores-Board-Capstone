@@ -23,10 +23,7 @@ export default class CreateChoreForm extends Component {
             date: this.state.date,
             userId: Number(sessionStorage.getItem("userId"))
           }
-          // clearInputFields = () => {
-          //   let freshForm = document.querySelector("#activity").value
-          //   return freshForm.innerHTML = ""
-          // }
+          
         this.props
             .addChore(newChore)
             .then(() => this.props.history.push("/home"));
@@ -35,21 +32,21 @@ export default class CreateChoreForm extends Component {
           render() {
               return (
                   <React.Fragment>
-              <h4> Make a New Chore or View what you've got To-Do :</h4>
+              <h2> Make a New Chore or View what you've got To-Do :</h2>
               <form className="form">
                 <section className="card border-danger mb-3">
                   <div className="card-body">
-                      <label>Title: </label>
+                    <label>Title: </label>
                       <input className="form-control mb-2" type="text" id="activity" required
                       placeholder="Title your chore..." onChange={this.handleFieldChange}/>
-                      <label>Materials: </label>
+                    <label>Materials: </label>
                       <input className="form-control mb-2" type="text" id="materials" required 
                       placeholder="List supplies or tools..." onChange={this.handleFieldChange}/>
-                      <label className="message-end">When would you like it done?</label>
+                    <label className="message-end">When would you like it done?</label>
                       <input type="date" id="date" required onChange={this.handleFieldChange}/>
-                  </div>
-                  <div className="message-end">
-                  <button className="btn btn-outline-dark" onClick={this.constructNewChore}>Save</button>
+                    <div className="message-end">
+                      <button className="btn btn-outline-dark" onClick={this.constructNewChore}>Save</button>
+                    </div>
                   </div>
                 </section>
             </form>
