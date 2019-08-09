@@ -9,57 +9,69 @@
       "username": "Jordan",
       "password": "Jordan",
       "id": 2
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "id": 3
     }
   ],
   "chores": [
     {
-      "activity": "Make the Delete Button Work",
-      "materials": "Fetch calls and time",
-      "date": "2019-08-01",
-      "userId": 1,
-      "id": 1
+      "activity": "Sweep the Hall",
+      "materials": "Broom, Dustpan",
+      "date": "2019-08-09",
+      "userId": 2,
+      "id": 4
     },
     {
-      "activity": "Mop the Bathroom",
-      "materials": "Swiffer Mop and Attachments",
-      "date": "2019-08-07",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "activity": "Sweep the Kitchen",
-      "materials": "Broom, Dustpan, Arm Strength",
-      "date": "2019-08-08",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "activity": "Wipe off Countertops",
-      "materials": "paper towels",
-      "date": "2019-08-07",
+      "activity": "Fold Clothes",
+      "materials": "Half an hour on Thursday",
+      "date": "2019-08-15",
       "userId": 2,
       "id": 5
     },
     {
-      "activity": "Load the Dishwasher",
-      "materials": "Scrub Brush",
-      "date": "2019-08-09",
+      "activity": "Wash Dishes",
+      "materials": "Scrub Brush, Dish Soap",
+      "date": "2019-08-10",
       "userId": 2,
-      "id": 7
+      "id": 6
     },
     {
-      "id": 8,
-      "activity": "Sweep the Hall",
-      "materials": "Time",
-      "date": "2019-08-07",
+      "id": 7,
+      "activity": "Walk the Dog",
+      "materials": "Leash, Trash Bags",
+      "date": "2019-08-12",
       "userId": 2
     },
     {
-      "activity": "Mop the Kitchen",
-      "materials": "Mop",
-      "date": "2019-08-13",
-      "userId": 2,
+      "activity": "Make a Join Table",
+      "materials": "Computer, Music, Focus",
+      "date": "2019-08-11",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "activity": "Organize Bookshelf",
+      "materials": "Books from the Closet, Swiffer Duster",
+      "date": "2019-08-15",
+      "userId": 1,
       "id": 9
+    },
+    {
+      "activity": "Vacuum Bedroom",
+      "materials": "Vacuum Cleaner",
+      "date": "2019-08-09",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "activity": "Walk the cat",
+      "materials": "leash",
+      "date": "2019-08-12",
+      "userId": 1,
+      "id": 11
     }
   ]
 }
