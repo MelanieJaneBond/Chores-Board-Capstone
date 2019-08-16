@@ -18,27 +18,6 @@
   ],
   "chores": [
     {
-      "activity": "Fold Clothes",
-      "materials": "Half an hour on Thursday",
-      "date": "2019-08-15",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "id": 8,
-      "activity": "Make a Join Table",
-      "materials": "Hammer and Nails",
-      "date": "2019-08-16",
-      "userId": 1
-    },
-    {
-      "activity": "Get dressed for New Orleans",
-      "materials": "Comfy Shoes, Hat or Umbrella",
-      "date": "2019-08-14",
-      "userId": 1,
-      "id": 13
-    },
-    {
       "activity": "Start your stretch goals",
       "materials": "Computer, charger, a clean workplace",
       "date": "2019-08-16",
@@ -47,10 +26,73 @@
     },
     {
       "activity": "Load the Dishwasher",
-      "materials": "Hands and Time",
-      "date": "2019-08-06",
+      "materials": "hands and brains",
+      "date": "2019-08-17",
+      "userId": 2,
+      "id": 15
+    },
+    {
+      "activity": "Paint the Garage",
+      "materials": "Paint, Brushes, Friends",
+      "date": "2019-08-08",
       "userId": 2,
       "id": 16
+    },
+    {
+      "activity": "Let the Dog Out",
+      "materials": "Stay in view of dog while she is outside",
+      "date": "2019-08-16",
+      "userId": 2,
+      "id": 17
+    },
+    {
+      "activity": "Take out the Trash",
+      "materials": "Fresh Bags",
+      "date": "2019-08-19",
+      "userId": 2,
+      "id": 18
+    },
+    {
+      "activity": "Walk the Cat",
+      "materials": "Leash ?!",
+      "date": "2019-08-20",
+      "userId": 2,
+      "id": 19
+    },
+    {
+      "activity": "Put out the Recycling",
+      "materials": "Strength, Good Memory",
+      "date": "2019-08-21",
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "activity": "Merge the Branch",
+      "materials": "Courage",
+      "date": "2019-08-16",
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "activity": "Celebrate with Jordan",
+      "materials": "Energy",
+      "date": "2019-08-17",
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "activity": "Take a nap",
+      "materials": "2hrs",
+      "date": "2019-08-17",
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "activity": "Make a New Page",
+      "materials": "Directions / A Plan",
+      "date": "2019-08-16",
+      "userId": 1,
+      "id": 25
     }
   ]
 }

@@ -32,7 +32,6 @@ export default class CreateChoreForm extends Component {
           render() {
               return (
                   <React.Fragment>
-              <h2> Make a New Chore or View what you've got To-Do :</h2>
               <form className="form">
                 <section className="card border-danger mb-3">
                   <div className="card-body">

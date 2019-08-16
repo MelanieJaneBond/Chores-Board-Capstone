@@ -91,17 +91,17 @@ render() {
         <Route path="/welcome" render={props => {
             return <Register {...props} users={this.state.users} onLogin={this.onLogin} registerUser={this.registerUser} />
         }} />
-
+        
         <Route path="/home" render={props => {
             if (this.isAuthenticated()) {
-              return <CreateChoreForm {...props} addChore={this.addChore} />
+              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore} />
             } else {
               return <Redirect to="/" />     
         }}} />
 
         <Route path="/home" render={props => {
-             if (this.isAuthenticated()) {
-              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore} />
+            if (this.isAuthenticated()) {
+              return <CreateChoreForm {...props} addChore={this.addChore} />
             } else {
               return <Redirect to="/" />     
         }}} />
