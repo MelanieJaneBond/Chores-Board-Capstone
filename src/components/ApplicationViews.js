@@ -7,6 +7,7 @@ import SavedChores from "./chore/SavedChores"
 import EditChoreForm from "./chore/EditChoreForm"
 import Register from "./welcome/LoginAndRegister"
 import WelcomeMessage from "./welcome/Message"
+import CompletedChores from "./chore/CompletedChores"
 
 export default class ApplicationViews extends Component {
   state = {
@@ -40,11 +41,6 @@ export default class ApplicationViews extends Component {
     )
   }
 
-  // clearInputFields = () => {
-  //   let freshForm = document.querySelector("#activity").value
-  //   return freshForm.innerHTML = ""
-  // }
-
   editForm = (choreToEdit) => {
     return APImanager.put("chores", choreToEdit)
       .then(() => APImanager.getChoresByUserId("chores", choreToEdit.userId)
@@ -53,6 +49,16 @@ export default class ApplicationViews extends Component {
           chores: chores
         })
       }))
+  }
+
+  patchChoreObject = (choreToPatch) => {
+    return APImanager.patchChore(choreToPatch)
+    .then(() => APImanager.getChoresByUserId("chores", choreToPatch.userId)
+    .then(choresPatched => {
+      this.setState({
+        chores: choresPatched
+      })
+    }))
   }
 
   deleteChore = (id, userId) => {
@@ -94,7 +100,7 @@ render() {
         
         <Route path="/home" render={props => {
             if (this.isAuthenticated()) {
-              return <SavedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore} />
+              return <SavedChores {...props} chores={this.state.chores} patchChoreObject={this.patchChoreObject} />
             } else {
               return <Redirect to="/" />     
         }}} />
@@ -111,7 +117,15 @@ render() {
               let chosenChore = this.state.chores.find(one => one.id === parseInt(props.match.params.choresId))
             return <EditChoreForm {...props} chores={chosenChore} editForm={this.editForm} deleteChore={this.deleteChore} />
           }} />
-        </React.Fragment>
+
+        <Route
+          exact path="/completed" render={props => {
+            if (this.isAuthenticated()) {
+            return <CompletedChores {...props} chores={this.state.chores} deleteChore={this.deleteChore} />
+          } else {
+            return <Redirect to="/" />
+          }}} />
+      </React.Fragment>
         )
     }
 }

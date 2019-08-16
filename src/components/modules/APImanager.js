@@ -9,7 +9,22 @@ export default {
   removeAndList(resource, id, userId) {
     return this.delete(resource, id)
     .then( () => this.getChoresByUserId("chores", userId))
-},
+  },
+
+  getCompletedTrueChores(id) {
+    return fetch(`${remoteURL}/chores?isComplete=true&userId=${id}`)
+    .then(c => c.json())
+  },
+
+  patchChore(object) {
+    return fetch(`${remoteURL}/chores/${object.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json" },
+        body: JSON.stringify(object)
+      })
+      .then(c => c.json())
+  },
 
   get(resource, id) {
     return fetch(`${remoteURL}/${resource}/${id}`)

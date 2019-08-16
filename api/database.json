@@ -22,6 +22,7 @@
       "materials": "Computer, charger, a clean workplace",
       "date": "2019-08-16",
       "userId": 1,
+      "isComplete": false,
       "id": 14
     },
     {
@@ -29,6 +30,7 @@
       "materials": "hands and brains",
       "date": "2019-08-17",
       "userId": 2,
+      "isComplete": false,
       "id": 15
     },
     {
@@ -36,6 +38,7 @@
       "materials": "Paint, Brushes, Friends",
       "date": "2019-08-08",
       "userId": 2,
+      "isComplete": false,
       "id": 16
     },
     {
@@ -43,6 +46,7 @@
       "materials": "Stay in view of dog while she is outside",
       "date": "2019-08-16",
       "userId": 2,
+      "isComplete": false,
       "id": 17
     },
     {
@@ -50,6 +54,7 @@
       "materials": "Fresh Bags",
       "date": "2019-08-19",
       "userId": 2,
+      "isComplete": false,
       "id": 18
     },
     {
@@ -57,6 +62,7 @@
       "materials": "Leash ?!",
       "date": "2019-08-20",
       "userId": 2,
+      "isComplete": false,
       "id": 19
     },
     {
@@ -64,6 +70,7 @@
       "materials": "Strength, Good Memory",
       "date": "2019-08-21",
       "userId": 2,
+      "isComplete": false,
       "id": 20
     },
     {
@@ -71,6 +78,7 @@
       "materials": "Courage",
       "date": "2019-08-16",
       "userId": 1,
+      "isComplete": false,
       "id": 21
     },
     {
@@ -78,6 +86,7 @@
       "materials": "Energy",
       "date": "2019-08-17",
       "userId": 1,
+      "isComplete": true,
       "id": 23
     },
     {
@@ -85,13 +94,15 @@
       "materials": "2hrs",
       "date": "2019-08-17",
       "userId": 1,
-      "id": 24
+      "id": 24,
+      "isComplete": true
     },
     {
       "activity": "Make a New Page",
       "materials": "Directions / A Plan",
       "date": "2019-08-16",
       "userId": 1,
+      "isComplete": false,
       "id": 25
     }
   ]
