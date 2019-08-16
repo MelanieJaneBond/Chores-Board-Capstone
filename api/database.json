@@ -9,57 +9,90 @@
       "username": "Jordan",
       "password": "Jordan",
       "id": 2
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "id": 3
     }
   ],
   "chores": [
     {
-      "activity": "Make the Delete Button Work",
-      "materials": "Fetch calls and time",
-      "date": "2019-08-01",
+      "activity": "Start your stretch goals",
+      "materials": "Computer, charger, a clean workplace",
+      "date": "2019-08-16",
       "userId": 1,
-      "id": 1
+      "id": 14
     },
     {
-      "activity": "Mop the Bathroom",
-      "materials": "Swiffer Mop and Attachments",
-      "date": "2019-08-07",
-      "userId": 1,
-      "id": 2
+      "activity": "Load the Dishwasher",
+      "materials": "hands and brains",
+      "date": "2019-08-17",
+      "userId": 2,
+      "id": 15
     },
     {
-      "activity": "Sweep the Kitchen",
-      "materials": "Broom, Dustpan, Arm Strength",
+      "activity": "Paint the Garage",
+      "materials": "Paint, Brushes, Friends",
       "date": "2019-08-08",
-      "userId": 1,
-      "id": 3
+      "userId": 2,
+      "id": 16
     },
     {
       "activity": "Let the Dog Out",
       "materials": "Stay in view of dog while she is outside",
-      "date": "2019-08-06",
+      "date": "2019-08-16",
       "userId": 2,
-      "id": 4
+      "id": 17
     },
     {
-      "activity": "Wipe off Countertops",
-      "materials": "paper towels",
-      "date": "2019-08-07",
+      "activity": "Take out the Trash",
+      "materials": "Fresh Bags",
+      "date": "2019-08-19",
       "userId": 2,
-      "id": 5
+      "id": 18
     },
     {
-      "activity": "Unload the Dishwasher",
-      "materials": "Time",
-      "date": "2019-08-09",
+      "activity": "Walk the Cat",
+      "materials": "Leash ?!",
+      "date": "2019-08-20",
       "userId": 2,
-      "id": 6
+      "id": 19
     },
     {
-      "activity": "Load the Dishwasher",
-      "materials": "Scrub Brush",
-      "date": "2019-08-09",
+      "activity": "Put out the Recycling",
+      "materials": "Strength, Good Memory",
+      "date": "2019-08-21",
       "userId": 2,
-      "id": 7
+      "id": 20
+    },
+    {
+      "activity": "Merge the Branch",
+      "materials": "Courage",
+      "date": "2019-08-16",
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "activity": "Celebrate with Jordan",
+      "materials": "Energy",
+      "date": "2019-08-17",
+      "userId": 1,
+      "id": 23
+    },
+    {
+      "activity": "Take a nap",
+      "materials": "2hrs",
+      "date": "2019-08-17",
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "activity": "Make a New Page",
+      "materials": "Directions / A Plan",
+      "date": "2019-08-16",
+      "userId": 1,
+      "id": 25
     }
   ]
 }

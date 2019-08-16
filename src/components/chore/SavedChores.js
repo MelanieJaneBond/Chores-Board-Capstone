@@ -18,7 +18,7 @@ loadUsersChores = evt => {
 render() {
 return (
 <React.Fragment>
-    <h2>To Do List :</h2>
+{/* <h2> Got To-Do :</h2> */}
         <section className="chore">
         {this.props.chores.sort((a,b) => {
             const firstChoreInArray = Date.parse(a.date)
