@@ -18,17 +18,11 @@
   ],
   "chores": [
     {
-      "activity": "Start your stretch goals",
-      "materials": "Computer, charger, a clean workplace",
-      "date": "2019-08-16",
-      "userId": 1,
-      "id": 14
-    },
-    {
       "activity": "Load the Dishwasher",
       "materials": "hands and brains",
       "date": "2019-08-17",
       "userId": 2,
+      "isComplete": false,
       "id": 15
     },
     {
@@ -36,6 +30,7 @@
       "materials": "Paint, Brushes, Friends",
       "date": "2019-08-08",
       "userId": 2,
+      "isComplete": false,
       "id": 16
     },
     {
@@ -43,6 +38,7 @@
       "materials": "Stay in view of dog while she is outside",
       "date": "2019-08-16",
       "userId": 2,
+      "isComplete": false,
       "id": 17
     },
     {
@@ -50,6 +46,7 @@
       "materials": "Fresh Bags",
       "date": "2019-08-19",
       "userId": 2,
+      "isComplete": false,
       "id": 18
     },
     {
@@ -57,6 +54,7 @@
       "materials": "Leash ?!",
       "date": "2019-08-20",
       "userId": 2,
+      "isComplete": false,
       "id": 19
     },
     {
@@ -64,6 +62,7 @@
       "materials": "Strength, Good Memory",
       "date": "2019-08-21",
       "userId": 2,
+      "isComplete": false,
       "id": 20
     },
     {
@@ -71,28 +70,88 @@
       "materials": "Courage",
       "date": "2019-08-16",
       "userId": 1,
+      "isComplete": true,
       "id": 21
     },
     {
-      "activity": "Celebrate with Jordan",
-      "materials": "Energy",
-      "date": "2019-08-17",
-      "userId": 1,
-      "id": 23
+      "activity": "Mop the Kitchen",
+      "materials": "Mop and Bucket",
+      "date": "2019-08-18",
+      "isComplete": true,
+      "userId": 3,
+      "id": 27
     },
     {
-      "activity": "Take a nap",
-      "materials": "2hrs",
-      "date": "2019-08-17",
-      "userId": 1,
-      "id": 24
+      "activity": "Vacuum the Bedroom",
+      "materials": "Vacuum and Time",
+      "date": "2019-08-19",
+      "isComplete": true,
+      "userId": 3,
+      "id": 28
     },
     {
-      "activity": "Make a New Page",
-      "materials": "Directions / A Plan",
-      "date": "2019-08-16",
+      "activity": "Let the Dog Out",
+      "materials": "Stay in view of dog while she is outside",
+      "date": "2019-08-18",
+      "isComplete": false,
+      "userId": 3,
+      "id": 29
+    },
+    {
+      "activity": "Wipe off Countertops",
+      "materials": "paper towels",
+      "date": "2019-08-20",
+      "isComplete": false,
       "userId": 1,
-      "id": 25
+      "id": 31
+    },
+    {
+      "activity": "Dust the Window Sills",
+      "materials": "Baby Wipes (the best!)",
+      "date": "2019-08-18",
+      "isComplete": false,
+      "userId": 1,
+      "id": 32
+    },
+    {
+      "id": 33,
+      "activity": "Give away the Give-away",
+      "materials": "Strength, space in the car",
+      "date": "2019-08-22",
+      "isComplete": false,
+      "userId": 1
+    },
+    {
+      "activity": "Merge the \"other\" Branch",
+      "materials": "Patience and Time",
+      "date": "2019-08-18",
+      "isComplete": true,
+      "userId": 1,
+      "id": 34
+    },
+    {
+      "activity": "Sweep the Hall",
+      "materials": "broom, dustpan",
+      "date": "2019-08-17",
+      "isComplete": true,
+      "userId": 1,
+      "id": 35
+    },
+    {
+      "activity": "Sweep the Bedroom",
+      "materials": "broom, dustpan",
+      "date": "2019-08-21",
+      "isComplete": false,
+      "userId": 1,
+      "id": 36
+    },
+    {
+      "activity": "Call your Grandmother",
+      "materials": "Time, a GOOD attitude",
+      "date": "2019-08-18",
+      "isComplete": true,
+      "userId": 1,
+      "id": 37
     }
   ]
 }

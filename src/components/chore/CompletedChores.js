@@ -2,36 +2,28 @@ import React, { Component } from "react"
 import "./Chore.css"
 import APImanager from "../modules/APImanager";
 
-export default class SavedChores extends Component {
+export default class CompletedChores extends Component {
 
-choreComplete(choreId) {
-    const choreObject = {
-        id: choreId,
-        isComplete: true,
-        userId: parseInt(sessionStorage.getItem("userId"))
-    }
-    this.props.patchChoreObject(choreObject)
-}
-
-// loadUsersChores = evt => {
+// loadUsersCompletedChores = evt => {
 //     evt.preventDefault();
-//     APImanager.getChoresByUserId("userId")
+//     APImanager.getCompletedTrueChores("userId")
 //     .then(choresOfUser =>
 //         this.setState({
 //           chores: choresOfUser 
 //     })
 // )
-//     this.props.history.push("/home")
+//     this.props.history.push("/completed")
 // }
+
 
 render() {
 return (
 <React.Fragment>
         <section className="chore">
         {this.props.chores.filter(them => {
-            if (them.isComplete === false) {
-                return them
-            }}).sort((a,b) => {
+        if (them.isComplete === true) {
+            return them
+        }}).sort((a,b) => {
             const firstChoreInArray = Date.parse(a.date)
             const secondChoreInArray = Date.parse(b.date)
             return firstChoreInArray - secondChoreInArray
@@ -44,8 +36,7 @@ return (
                     <h6 className="card-text">{each.date}</h6>
                 </div>
                 <section className="clickies">
-                    <button className="btn btn-primary btn-sm" onClick={() => this.props.history.push(`/edit/${each.id}`)}>Edit</button>
-                    <button className="btn btn-info btn-sm" onClick={() => this.choreComplete(each.id)}>Finished!</button>
+                    <button className="btn btn-outline-dark" onClick={() => this.props.deleteChore(each.id, each.userId)}>Delete</button>
                 </section>
             </div>
         </div>

@@ -6,6 +6,7 @@ export default class CreateChoreForm extends Component {
         activity: "",
         materials: "",
         date: "",
+        isComplete: "",
         userId: ""
       }
       
@@ -21,6 +22,7 @@ export default class CreateChoreForm extends Component {
             activity: this.state.activity,
             materials: this.state.materials,
             date: this.state.date,
+            isComplete: false,
             userId: Number(sessionStorage.getItem("userId"))
           }
           
