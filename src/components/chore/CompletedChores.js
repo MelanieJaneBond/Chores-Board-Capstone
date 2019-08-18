@@ -42,6 +42,7 @@ return (
         </div>
         )}
     </section>
+    <h2>Now that you're DONE, do something FUN!</h2>
 </React.Fragment>
 )
 }}

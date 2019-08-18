@@ -5,7 +5,7 @@
     text-shadow: 3px 3px black;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin: 12px;
     color: white;

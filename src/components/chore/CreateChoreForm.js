@@ -34,6 +34,7 @@ export default class CreateChoreForm extends Component {
           render() {
               return (
                   <React.Fragment>
+                <h2>Fill out a notecard for each chore you'd like to complete!</h2>
               <form className="form">
                 <section className="card border-danger mb-3">
                   <div className="card-body">

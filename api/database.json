@@ -22,7 +22,7 @@
       "materials": "hands and brains",
       "date": "2019-08-17",
       "userId": 2,
-      "isComplete": false,
+      "isComplete": true,
       "id": 15
     },
     {
@@ -30,7 +30,7 @@
       "materials": "Paint, Brushes, Friends",
       "date": "2019-08-08",
       "userId": 2,
-      "isComplete": false,
+      "isComplete": true,
       "id": 16
     },
     {
@@ -38,7 +38,7 @@
       "materials": "Stay in view of dog while she is outside",
       "date": "2019-08-16",
       "userId": 2,
-      "isComplete": false,
+      "isComplete": true,
       "id": 17
     },
     {
