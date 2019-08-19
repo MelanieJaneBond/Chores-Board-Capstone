@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The Chores Board
 
-## Available Scripts
+Welcome to The Chores Board. It is a user-specific CRUD app that creates virtual notecards representing Chores for each user.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+These instructions will get you a copy of the project up and running on your local machine.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+First, you'll need to clone down the repo into a directory. Open your terminal and type:
+```
+git clone git@github.com:MelanieJaneBond/Chores-Board-Capstone.git
+```
+After you hit "enter," "code ." to open up the files.
+Then, you will need to do the following:
++ 1. go into the `api/database.json.example` file
++ 2. Cmd + A (on Mac) or Ctrl + A (on Windows) to copy all of the example database
++ 3. While in the `api` directory, make a new file and call it `database.json`
++ 4. Cmd + V (on Mac) or Ctrl + V (on Windows) to paste `database.json.example`
 
-### `npm test`
+You will need to install node modules, so, run the command:
+```
+npm install
+```
+Now, you're ready to run the application. In your terminal, run the following command:
+```
+npm start
+```
+Open a new window of your Terminal, and, cd all the way in to the `api` directory of your copy of The Chores Board app. Then, type the command:
+```
+json-server -p 5002 -w database.json
+```
+##### You are now ready to use The Chores Board.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## First Time User Instructions
+* A Welcome message should appear when you first access the React App in your browser
+* Click the "Here" button under the message to go to the Registration and Login page
+* You will need to register a new user in order to begin building your chores; type a name and password and hit "Register"
+* After you have Registered, you will be taken to the main page where you can create Notecards that represent Chores you'd like to get done.
+* Each Chore you create can be edited, re-saved, set as "Finished" and viewed in the "Completed Chores" page where you can see what you've done and you can delete notecards you do not want to keep any more.
+* When you're done for the day, hit the "Logout" link in the NavBar and you will be able to log back in the next time you access the app.
 
-### `npm run build`
+### We hope you enjoy The Chores Board!
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Built With
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* [VanillaJS](http://es6-features.org/#Constants) - The language used
+* [React](https://reactjs.org/) - Framework
+* [Bootstrap4.3](https://getbootstrap.com/) - Used for some of the styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Author
+* **Melanie Jane Bond**
